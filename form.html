@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/1600/1600145.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id='form' method="post" action="/post">
+    <h1>Анкета</h1>
+    <div>
+        <label for="nickname">Кличка питомца *</label>
+        <input type="text" name="nickname" id=nickname required />
+    </div>
+    <div>
+        <label for="name">Имя владельца *</label>
+        <input type="text" name ="name" id=name  required/>
+    </div>
+    <div></div>
+        <label for="number">Телефон владельца *</label>
+        <input type="tel" name="telnumber" id=number required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+        <span> Формат 926-265-2648</span>
+    </div>
+    <div>
+        <label for="breed">Порода питомца</label>
+        <select size="1" id=breed name="breed">
+            <option selected>Выберите породу</option>
+            <option value="1">Абиссинская</option>
+            <option value="2">Австралийский мист</option>
+            <option value="3">Азиатская (табби)</option>
+            <option value="4">Акринская</option>
+            <option value="5">Американский бобтейл длинношёрстный</option>
+            <option value="6">Американский бобтейл короткошёрстный</option>
+            <option value="7">Американская жесткошёрстная</option>
+            <option value="8">Американский кёрл длинношёрстный</option>
+            <option value="9">Американский кёрл короткошёрстный</option>
+            <option value="10">Американская короткошёрстная</option>
+            <option value="11">Анатолийская</option>
+            <option value="12"> Аравийский мау</option>
+            <option value="13">Балинезийская (Балинез, балийская)</option>
+        </select>
+    </div>
+    <div class= "food"> Чем питается <br>
+        <label for="dryfood">Сухой корм</label>
+        <input type="checkbox" name="food" id="dryfood" value="dryfood" />
+        <label for="wetfood">Влажный корм</label>
+        <input type="checkbox" name="food" id="wetfood" value="wetfood" />
+        <label for="naturalfood">Натуральный корм</label>
+        <input type="checkbox" name="food" id="naturalfood" value="naturalfood" />
+    </div>
+    <div class= "sex">Выберите пол <br>
+        <label for="female">Самка</label>
+        <input type="radio" name="sex" value="f" id="female" />
+        <label for="male">Самец</label>
+        <input type="radio" name="sex" value="m" id="male" />
+    </div>
+    <div><label for="comment">Комментарий владельца</label> <br>
+        <textarea cols="40" rows="10" id="comment"></textarea>
+    </div>
+    <div><label for="foto">Приложить фото питомца</label> <br>
+        <input type="file" name="foto" id="foto" />
+    </div>
+    <button>Отправить</button>
+</form>
+<script src="script.js"></script>
+</body>
+
+</html>

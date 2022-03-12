@@ -1,0 +1,30 @@
+form {
+    width: 450px;
+    height: 600px;
+    display: grid;
+}
+
+span {
+    font-style: italic;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    width: 100px;
+}
+
+input:required:valid {
+    border-color: green;
+}
+
+#number {
+    width: 300px;
+}
+
+.food,
+.sex {
+    font-weight: bold;
+}
